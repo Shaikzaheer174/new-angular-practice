@@ -1,0 +1,16 @@
+<h1>property binding Example</h1>
+<input [id]="courseID" type="text" value="angular" />
+<br />
+
+<!-- we can also do it with interpolation but only string -->
+<input type="text" id="{{ courseID }}" />
+
+<br />
+
+<!-- boolean type not work with binding -->
+<input type="text" placeholder="text" disabled="{{ false }}" /><br />
+
+<input type="text" placeholder="text" [disabled]="false" /><br />
+
+<!-- intead of square brackets we can also use bind- keyword -->
+<input type="text" placeholder="text" bind-disabled="disabledText" />
