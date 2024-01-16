@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## create a new component with out html and css and spec files.
+
+Run `ng g c [componentName] --inline-style --inline-template --skip-tests` to create a component with inline template and inline styles and to skip tests.
