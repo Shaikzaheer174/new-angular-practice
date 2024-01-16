@@ -1,0 +1,13 @@
+<h1>Style binding example</h1>
+
+<h2 [style.color]="'blue'">style binding</h2>
+
+<!-- we can use property value to bind -->
+<h2 [style.color]="myColor">color via property bind</h2>
+
+<h2 [style.color]="required ? 'green' : 'red'">
+  conditional style binding using ternery operator
+</h2>
+
+<!-- multiple styles -->
+<h2 [ngStyle]="myStyles">multiple styles </h2>
