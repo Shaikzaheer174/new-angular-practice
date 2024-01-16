@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(37, 177, 110);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.normal {
+    text-align: center;
+    font-size: 30px;
+    color: red;
+}
+
+.text-color {
+    color: green;
+}
+
+.text-size {
+    font-size: 60px;
+}
+
+.text-style {
+    font-style: italic;
+}
+
