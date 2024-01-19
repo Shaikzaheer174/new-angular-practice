@@ -9,6 +9,7 @@ import { PropertyBindingExampleComponent } from './property-binding-example/prop
 import { ClassBindingExampleComponent } from './class-binding-example/class-binding-example.component';
 import { StyleBindingExampleComponent } from './style-binding-example/style-binding-example.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { TemplateReferenceVarComponent } from './template-reference-var/template-reference-var.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
     PropertyBindingExampleComponent,
     ClassBindingExampleComponent,
     StyleBindingExampleComponent,
-    EventBindingComponent
+    EventBindingComponent,
+    TemplateReferenceVarComponent
   ],
   imports: [
     BrowserModule,

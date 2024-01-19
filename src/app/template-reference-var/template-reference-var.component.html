@@ -1,0 +1,9 @@
+<p>template-reference-var works!</p>
+
+<input #inputData type="text" placeholder="Enter Text" />
+
+<button (click)="captureData(inputData.value)">
+  Click me to capture inputs data
+</button>
+
+<h1>data captured: {{ dataFromTemplate }}</h1>
