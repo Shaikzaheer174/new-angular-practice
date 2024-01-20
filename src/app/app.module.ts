@@ -12,6 +12,7 @@ import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVarComponent } from './template-reference-var/template-reference-var.component';
 import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
 import { FormsModule } from '@angular/forms';
+import { NgIfDirectiveExampleComponent } from './ng-if-directive-example/ng-if-directive-example.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     StyleBindingExampleComponent,
     EventBindingComponent,
     TemplateReferenceVarComponent,
-    TwoWayDataBindingComponent
+    TwoWayDataBindingComponent,
+    NgIfDirectiveExampleComponent
   ],
   imports: [
     BrowserModule,

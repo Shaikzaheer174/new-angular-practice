@@ -1,0 +1,29 @@
+<p>ng-if-directive-example works!</p>
+
+<h1>Hi i'm {{ name }}</h1>
+<br>
+
+<h1 *ngIf="true">i'm rendered based on condition. {{ name }}</h1>
+
+<!-- condition with dynamic -->
+<!-- <h1 *ngIf="required">i'm rendered based on condition. {{ name }}</h1> -->
+
+
+<!-- else with ngIf -->
+<h1 *ngIf="required; else elseBlock">i am in if block</h1>
+<ng-template #elseBlock>
+<h1>i am in else block...</h1>
+</ng-template>
+
+
+
+<!-- true and false blocks -->
+<h1 *ngIf="status; then trueBlock else  falseBlock"></h1>
+
+<ng-template #trueBlock>
+<h1>true</h1>
+</ng-template>
+
+<ng-template #falseBlock>
+<h1>false</h1>
+</ng-template>
