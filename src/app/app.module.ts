@@ -10,6 +10,8 @@ import { ClassBindingExampleComponent } from './class-binding-example/class-bind
 import { StyleBindingExampleComponent } from './style-binding-example/style-binding-example.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TemplateReferenceVarComponent } from './template-reference-var/template-reference-var.component';
+import { TwoWayDataBindingComponent } from './two-way-data-binding/two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { TemplateReferenceVarComponent } from './template-reference-var/template
     ClassBindingExampleComponent,
     StyleBindingExampleComponent,
     EventBindingComponent,
-    TemplateReferenceVarComponent
+    TemplateReferenceVarComponent,
+    TwoWayDataBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
