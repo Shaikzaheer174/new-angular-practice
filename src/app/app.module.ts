@@ -16,6 +16,7 @@ import { NgIfDirectiveExampleComponent } from './ng-if-directive-example/ng-if-d
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 import { NgForDirectiveExampleComponent } from './ng-for-directive-example/ng-for-directive-example.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChildComponentComponent } from './child-component/child-component.compo
     NgIfDirectiveExampleComponent,
     NgSwitchExampleComponent,
     NgForDirectiveExampleComponent,
-    ChildComponentComponent
+    ChildComponentComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
