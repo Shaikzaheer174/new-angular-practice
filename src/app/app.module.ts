@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { NgIfDirectiveExampleComponent } from './ng-if-directive-example/ng-if-directive-example.component';
 import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.component';
 import { NgForDirectiveExampleComponent } from './ng-for-directive-example/ng-for-directive-example.component';
+import { ChildComponentComponent } from './child-component/child-component.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgForDirectiveExampleComponent } from './ng-for-directive-example/ng-fo
     TwoWayDataBindingComponent,
     NgIfDirectiveExampleComponent,
     NgSwitchExampleComponent,
-    NgForDirectiveExampleComponent
+    NgForDirectiveExampleComponent,
+    ChildComponentComponent
   ],
   imports: [
     BrowserModule,
