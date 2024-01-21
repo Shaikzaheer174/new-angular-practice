@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello-world';
+  receiveddata: string | undefined;
   messageFromParent = 'parent message';
-  
+
+  receivedData(data: string): void {
+  this.receiveddata = data;
+  }
+
 }
