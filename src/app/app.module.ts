@@ -17,6 +17,8 @@ import { NgSwitchExampleComponent } from './ng-switch-example/ng-switch-example.
 import { NgForDirectiveExampleComponent } from './ng-for-directive-example/ng-for-directive-example.component';
 import { ChildComponentComponent } from './child-component/child-component.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { StudentListComponent } from './student-list/student-list.component';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { PipesComponent } from './pipes/pipes.component';
     NgSwitchExampleComponent,
     NgForDirectiveExampleComponent,
     ChildComponentComponent,
-    PipesComponent
+    PipesComponent,
+    StudentListComponent,
+    StudentDetailsComponent
   ],
   imports: [
     BrowserModule,
