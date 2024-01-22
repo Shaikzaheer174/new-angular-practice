@@ -19,6 +19,9 @@ import { ChildComponentComponent } from './child-component/child-component.compo
 import { PipesComponent } from './pipes/pipes.component';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
+import { StudentlistServiceExComponent } from './studentlist-service-ex/studentlist-service-ex.component';
+import { StudentDetailsServiceExComponent } from './student-details-service-ex/student-details-service-ex.component';
+import { StudentServiceService} from './student-service.service';
 
 @NgModule({
   declarations: [
@@ -37,14 +40,16 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
     ChildComponentComponent,
     PipesComponent,
     StudentListComponent,
-    StudentDetailsComponent
+    StudentDetailsComponent,
+    StudentlistServiceExComponent,
+    StudentDetailsServiceExComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [StudentServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
