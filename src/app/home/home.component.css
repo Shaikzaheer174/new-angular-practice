@@ -1,0 +1,10 @@
+h1 {
+    color: palevioletred;
+    text-decoration: dashed;
+    text-align: center;
+    font-family: cursive;
+    font-size: 90px;
+    border: 1px solid darkblue;
+    border-radius: 5px;
+    border-color:antiquewhite;
+}

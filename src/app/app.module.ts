@@ -27,6 +27,8 @@ import { StudentDetailsServiceExWithHttpComponent } from './student-details-serv
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { CourseListComponent } from './course-list/course-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,9 @@ import { CourseListComponent } from './course-list/course-list.component';
     StudentlistServiceExWithHttpComponent,
     StudentDetailsServiceExWithHttpComponent,
     EmployeeListComponent,
-    CourseListComponent
+    CourseListComponent,
+    PageNotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
