@@ -25,6 +25,8 @@ import { StudentServiceService} from './student-service.service';
 import { StudentlistServiceExWithHttpComponent } from './studentlist-service-ex-with-http/studentlist-service-ex-with-http.component';
 import { StudentDetailsServiceExWithHttpComponent } from './student-details-service-ex-with-http/student-details-service-ex-with-http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { CourseListComponent } from './course-list/course-list.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { HttpClientModule } from '@angular/common/http';
     StudentlistServiceExComponent,
     StudentDetailsServiceExComponent,
     StudentlistServiceExWithHttpComponent,
-    StudentDetailsServiceExWithHttpComponent
+    StudentDetailsServiceExWithHttpComponent,
+    EmployeeListComponent,
+    CourseListComponent
   ],
   imports: [
     BrowserModule,
