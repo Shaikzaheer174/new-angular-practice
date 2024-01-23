@@ -9,11 +9,13 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class StudentDetailsServiceExWithHttpComponent implements OnInit {
   students: studentInterface[] = [];
+  errorMessage: string = '';
   constructor(private studentService: StudentServiceService){}
 
   ngOnInit(): void {
     this.studentService.getStudents().subscribe(
-      data => this.students = data
+      data => this.students = data,
+      error => this.errorMessage = error
     );
   }
 

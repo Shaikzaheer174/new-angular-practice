@@ -8,12 +8,14 @@ import { StudentServiceService } from '../student-service.service';
 })
 export class StudentlistServiceExWithHttpComponent implements OnInit {
   students: any;
+  errorMessage: any;
   constructor(private studentService: StudentServiceService) {
 
   }
   ngOnInit(): void {
     this.studentService.getStudents().subscribe(
-      data => this.students = data
+      data => this.students = data,
+      error => this.errorMessage = error
     );
   }
 
