@@ -49,7 +49,11 @@
 <app-student-details></app-student-details> -->
 
 <!-- using a service example -->
-<app-studentlist-service-ex></app-studentlist-service-ex>
-<app-student-details-service-ex></app-student-details-service-ex>
+<!-- <app-studentlist-service-ex></app-studentlist-service-ex>
+<app-student-details-service-ex></app-student-details-service-ex> -->
+
+<!-- in above example we hardcoded the data in service class and provided to the component but in real should not do it so the data should come from server and we must call http get request to the server -->
+<app-studentlist-service-ex-with-http></app-studentlist-service-ex-with-http>
+<app-student-details-service-ex-with-http></app-student-details-service-ex-with-http>
 
 <router-outlet></router-outlet>

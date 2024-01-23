@@ -22,6 +22,9 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { StudentlistServiceExComponent } from './studentlist-service-ex/studentlist-service-ex.component';
 import { StudentDetailsServiceExComponent } from './student-details-service-ex/student-details-service-ex.component';
 import { StudentServiceService} from './student-service.service';
+import { StudentlistServiceExWithHttpComponent } from './studentlist-service-ex-with-http/studentlist-service-ex-with-http.component';
+import { StudentDetailsServiceExWithHttpComponent } from './student-details-service-ex-with-http/student-details-service-ex-with-http.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -42,12 +45,15 @@ import { StudentServiceService} from './student-service.service';
     StudentListComponent,
     StudentDetailsComponent,
     StudentlistServiceExComponent,
-    StudentDetailsServiceExComponent
+    StudentDetailsServiceExComponent,
+    StudentlistServiceExWithHttpComponent,
+    StudentDetailsServiceExWithHttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [StudentServiceService],
   bootstrap: [AppComponent]
