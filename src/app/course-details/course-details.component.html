@@ -1,0 +1,12 @@
+<h1>course-details</h1>
+
+<p>You are selected the course: {{ courseId }}</p>
+<div [ngSwitch]="courseId">
+  <div *ngSwitchCase="1">Javascript</div>
+  <div *ngSwitchCase="2">Java</div>
+  <div *ngSwitchCase="3">Angular</div>
+  <div *ngSwitchCase="4">typescript</div>
+  <div *ngSwitchCase="5">Html</div>
+  <div *ngSwitchCase="6">css</div>
+  <div *ngSwitchDefault>default course</div>
+</div>
