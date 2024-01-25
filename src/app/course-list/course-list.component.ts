@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -7,9 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./course-list.component.css']
 })
 export class CourseListComponent implements OnInit  {
-  constructor(private _router : Router){}
+  constructor(private _router : Router, private route: ActivatedRoute){}
+  selectedId!: number;
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe((params: ParamMap) => {
+    let id = Number(params.get('id'));
+    this.selectedId = id;
+  })
+
     
   }
   courseList = [
@@ -23,5 +29,9 @@ export class CourseListComponent implements OnInit  {
 
   onClick(x: any) {
     this._router.navigate(['/course',x.id]);
+  }
+
+  clicked(x:any): boolean {
+    return x.id === this.selectedId;
   }
 }

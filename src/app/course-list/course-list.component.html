@@ -1,6 +1,6 @@
 <h1 style="color: blue">course-list!</h1>
 <ul>
-  <li *ngFor="let x of courseList" (click)="onClick(x)">
+  <li *ngFor="let x of courseList" (click)="onClick(x)" [class.Selected]="clicked(x)">
     <p>{{ x.id }} -- {{ x.course }}</p>
   </li>
 </ul>

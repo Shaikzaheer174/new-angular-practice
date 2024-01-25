@@ -30,4 +30,8 @@ gotoNext() {
   this.router.navigate(['/course', nextId]);
 }
 
+goBack(){
+  let selectedId = this.courseId ? this.courseId : null;
+  this.router.navigate(['/course',{id: selectedId}]);
+}
 }
