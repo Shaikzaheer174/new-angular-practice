@@ -20,6 +20,7 @@ const routes: Routes = [
   // {path: 'course-list', component: CourseListComponent},  //relative navigation
   // {path: 'course-list/:id', component: CourseDetailsComponent},   //relative navigation
   {path: 'home', component: HomeComponent},
+  { path: 'faculty', loadChildren: () => import('./faculty/faculty.module').then(m => m.FacultyModule) },
   {path: '**', component: PageNotFoundComponent}
 ];
 
