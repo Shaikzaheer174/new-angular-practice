@@ -30,6 +30,8 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { CourseFeeComponent } from './course-fee/course-fee.component';
+import { CourseDurationComponent } from './course-duration/course-duration.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { CourseDetailsComponent } from './course-details/course-details.componen
     CourseListComponent,
     PageNotFoundComponent,
     HomeComponent,
-    CourseDetailsComponent
+    CourseDetailsComponent,
+    CourseFeeComponent,
+    CourseDurationComponent
   ],
   imports: [
     BrowserModule,

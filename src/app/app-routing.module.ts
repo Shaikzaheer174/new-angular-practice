@@ -5,12 +5,18 @@ import { CourseListComponent } from './course-list/course-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
+import { CourseDurationComponent } from './course-duration/course-duration.component';
+import { CourseFeeComponent } from './course-fee/course-fee.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'employee', component: EmployeeListComponent},
   {path: 'course', component: CourseListComponent},
-  {path: 'course/:id', component: CourseDetailsComponent},
+  {path: 'course/:id', 
+  component: CourseDetailsComponent,
+   children: [{path: 'fee', component: CourseFeeComponent},
+              {path: 'duration', component: CourseDurationComponent}]},
+              
   // {path: 'course-list', component: CourseListComponent},  //relative navigation
   // {path: 'course-list/:id', component: CourseDetailsComponent},   //relative navigation
   {path: 'home', component: HomeComponent},

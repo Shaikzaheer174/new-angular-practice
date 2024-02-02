@@ -37,4 +37,13 @@ goBack(){
   this.router.navigate(['/course',{id: selectedId}]); //absolute navigation
   // this.router.navigate(['../',{id: selectedId}],{relativeTo: this.route}); //relative navigation
 }
+
+
+showFee() {
+  this.router.navigate(['fee'], {relativeTo: this.route});
+}
+
+showDuration() {
+  this.router.navigate(['duration'], {relativeTo: this.route});
+}
 }
