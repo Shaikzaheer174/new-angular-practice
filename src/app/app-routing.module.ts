@@ -11,6 +11,8 @@ const routes: Routes = [
   {path: 'employee', component: EmployeeListComponent},
   {path: 'course', component: CourseListComponent},
   {path: 'course/:id', component: CourseDetailsComponent},
+  // {path: 'course-list', component: CourseListComponent},  //relative navigation
+  // {path: 'course-list/:id', component: CourseDetailsComponent},   //relative navigation
   {path: 'home', component: HomeComponent},
   {path: '**', component: PageNotFoundComponent}
 ];

@@ -28,7 +28,8 @@ export class CourseListComponent implements OnInit  {
   ];
 
   onClick(x: any) {
-    this._router.navigate(['/course',x.id]);
+    this._router.navigate(['/course',x.id]);  //its a absolute navigation 
+    // this._router.navigate([x.id], {relativeTo: this.route}); //relative navigation
   }
 
   clicked(x:any): boolean {

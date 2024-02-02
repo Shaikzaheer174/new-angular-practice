@@ -23,15 +23,18 @@ ngOnInit(): void {
 gotoPrevious(){
   let previousId = this.courseId - 1;
   this.router.navigate(['/course', previousId]);
+  // this.router.navigate(['../', previousId],{relativeTo: this.route});
 }
 
 gotoNext() {
   let nextId = this.courseId + 1;
-  this.router.navigate(['/course', nextId]);
+  this.router.navigate(['/course', nextId]); //absolute navigation
+  // this.router.navigate(['../',nextId], {relativeTo: this.route});
 }
 
 goBack(){
   let selectedId = this.courseId ? this.courseId : null;
-  this.router.navigate(['/course',{id: selectedId}]);
+  this.router.navigate(['/course',{id: selectedId}]); //absolute navigation
+  // this.router.navigate(['../',{id: selectedId}],{relativeTo: this.route}); //relative navigation
 }
 }
