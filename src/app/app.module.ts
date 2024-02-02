@@ -32,6 +32,8 @@ import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { CourseFeeComponent } from './course-fee/course-fee.component';
 import { CourseDurationComponent } from './course-duration/course-duration.component';
+import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
+import { adminAccessGuard } from './admin-access.guard';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,8 @@ import { CourseDurationComponent } from './course-duration/course-duration.compo
     HomeComponent,
     CourseDetailsComponent,
     CourseFeeComponent,
-    CourseDurationComponent
+    CourseDurationComponent,
+    AdminHomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -69,7 +72,7 @@ import { CourseDurationComponent } from './course-duration/course-duration.compo
     FormsModule,
     HttpClientModule
   ],
-  providers: [StudentServiceService],
+  providers: [StudentServiceService, adminAccessGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

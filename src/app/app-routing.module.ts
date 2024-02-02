@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { CourseDetailsComponent } from './course-details/course-details.component';
 import { CourseDurationComponent } from './course-duration/course-duration.component';
 import { CourseFeeComponent } from './course-fee/course-fee.component';
+import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
+import { adminAccessGuard } from './admin-access.guard';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -21,6 +23,7 @@ const routes: Routes = [
   // {path: 'course-list/:id', component: CourseDetailsComponent},   //relative navigation
   {path: 'home', component: HomeComponent},
   { path: 'faculty', loadChildren: () => import('./faculty/faculty.module').then(m => m.FacultyModule) },
+  {path: 'admin', component: AdminHomePageComponent, canActivate : [adminAccessGuard]},
   {path: '**', component: PageNotFoundComponent}
 ];
 
