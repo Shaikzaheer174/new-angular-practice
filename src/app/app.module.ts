@@ -34,6 +34,7 @@ import { CourseFeeComponent } from './course-fee/course-fee.component';
 import { CourseDurationComponent } from './course-duration/course-duration.component';
 import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
 import { adminAccessGuard } from './admin-access.guard';
+import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex/template-driven-forms-ex.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { adminAccessGuard } from './admin-access.guard';
     CourseDetailsComponent,
     CourseFeeComponent,
     CourseDurationComponent,
-    AdminHomePageComponent
+    AdminHomePageComponent,
+    TemplateDrivenFormsEXComponent
   ],
   imports: [
     BrowserModule,
