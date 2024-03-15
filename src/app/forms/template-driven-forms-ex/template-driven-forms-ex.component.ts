@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserModel } from './../../user-model';
 
 @Component({
   selector: 'app-template-driven-forms-ex',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./template-driven-forms-ex.component.css']
 })
 export class TemplateDrivenFormsEXComponent {
+  usermodel: UserModel = new UserModel();
 
+  submit() {
+    alert('data submitted');
+    console.log(this.usermodel);
+  }
 }
