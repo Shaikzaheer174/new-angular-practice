@@ -22,7 +22,7 @@
 
                 <div class="form-group">
                     <label>Password:</label>
-                    <input type="text" class="form-control" placeholder="Password" name="password"  [(ngModel)]="usermodel.password">
+                    <input type="text" required class="form-control" placeholder="Password" name="password"  [(ngModel)]="usermodel.password">
                 </div>
                 <div class="form-group">
                     <label>Email:</label>
@@ -37,7 +37,7 @@
             <div class="col-6">
                 <div class="form-group mb-3">
                     <label>I am interested in:</label>
-                    <select (blur)="validateCourse(myCourse.value)"  
+                    <select (blur)="validateCourse(myCourse.value)"
                         (change)="validateCourse(myCourse.value)" required #myCourse="ngModel" [class.is-invalid]="myCourse.invalid && myCourse.touched"  class="custom-select mb-3 form-control" name="course" id="inputGroupSelect01" [(ngModel)]="usermodel.course">
                         <option value="default">Choose Topic...</option>
                         <option *ngFor="let x of course">{{x}}</option>
@@ -47,22 +47,22 @@
 
 
                 <div class="form-group" style="padding-top: 10px;">
-                   <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
+                   <input class="form-check-input" required type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
                    <label class="form-check-label" for="flexRadioDefault"> Male </label>
                 </div>
                 <div class="form-group">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                    <input class="form-check-input" required type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
                     <label class="form-check-label" for="flexRadioDefault"> Female </label>
                 </div>
                 <div class="form-group">
                     <label>confirm Password:</label>
-                    <input type="text" class="form-control" placeholder="Password" name="confirmPassword"  [(ngModel)]="usermodel.confirmPassword">
+                    <input type="text" class="form-control" required placeholder="Password" name="confirmPassword"  [(ngModel)]="usermodel.confirmPassword">
                 </div>
                 <div class="form-check"  style="padding-top: 25px;">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="rememberPassword"  [(ngModel)]="usermodel.rememberPassword">
+                    <input class="form-check-input" type="checkbox" value="" required id="flexCheckDefault" name="rememberPassword"  [(ngModel)]="usermodel.rememberPassword">
                     <label class="form-check-label" for="flexCheckDefault"> Remember password ? </label>
                 </div>
-                <button class="btn btn-primary" style="margin-top: 30px;" (click)="submit()">Submit now!</button>
+                <button [disabled]="myForm.form.invalid || courseHasError" class="btn btn-primary" style="margin-top: 30px;" (click)="submit()">Submit now!</button>
             </div>
 
         </div>
@@ -71,6 +71,12 @@
 
     <div>
         {{usermodel | json}}
+    </div>
+
+    <!-- form validation -->
+    <!-- if all fields satisfied then it is true -->
+    <div>
+        {{myForm.form.valid}}
     </div>
 </div>
 
