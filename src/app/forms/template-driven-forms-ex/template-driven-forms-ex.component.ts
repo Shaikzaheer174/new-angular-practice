@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserModel } from './../../user-model';
+import { FormRegisterService } from 'src/app/form-register.service';
 
 @Component({
   selector: 'app-template-driven-forms-ex',
@@ -7,6 +8,7 @@ import { UserModel } from './../../user-model';
   styleUrls: ['./template-driven-forms-ex.component.css'],
 })
 export class TemplateDrivenFormsEXComponent {
+  constructor(private registerService: FormRegisterService) {}
   usermodel: UserModel = new UserModel();
   course = ['HTML', 'JS', 'CSS', 'TYPESCRIPT', 'JAVA'];
   courseHasError = true;
@@ -23,5 +25,12 @@ export class TemplateDrivenFormsEXComponent {
       this.courseHasError = false;
     }
   }
-  
+
+  onSubmit() {
+    // console.log(this.usermodel);
+    this.registerService.enroll(this.usermodel).subscribe(
+      data => console.log('Hurrah, data sent successfully....', data),
+      error => console.log('oops, somwthing went wrong...', error)
+    )
+  }
 }

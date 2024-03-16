@@ -1,6 +1,6 @@
 <div class="container">
     <p class="main-heading">Template-driven's SIGN UP</p>
-    <form #myForm="ngForm">
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
