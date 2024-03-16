@@ -4,4 +4,5 @@ export class UserModel {
   email!: string;
   confirmPassword!: string;
   rememberPassword!: string;
+  course!: string;
 }

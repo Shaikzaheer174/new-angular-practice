@@ -35,6 +35,17 @@
             </div>
 
             <div class="col-6">
+                <div class="form-group mb-3">
+                    <label>I am interested in:</label>
+                    <select (blur)="validateCourse(myCourse.value)"  
+                        (change)="validateCourse(myCourse.value)" required #myCourse="ngModel" [class.is-invalid]="myCourse.invalid && myCourse.touched"  class="custom-select mb-3 form-control" name="course" id="inputGroupSelect01" [(ngModel)]="usermodel.course">
+                        <option value="default">Choose Topic...</option>
+                        <option *ngFor="let x of course">{{x}}</option>
+                    </select>
+                    <small class="text-danger" [class.d-none]="!courseHasError || myCourse.untouched">please choose course</small>
+                </div>
+
+
                 <div class="form-group" style="padding-top: 10px;">
                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" >
                    <label class="form-check-label" for="flexRadioDefault"> Male </label>
