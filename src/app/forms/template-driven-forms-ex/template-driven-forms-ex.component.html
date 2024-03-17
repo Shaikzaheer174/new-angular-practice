@@ -1,6 +1,6 @@
 <div class="container">
     <p class="main-heading">Template-driven's SIGN UP</p>
-    <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+    <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
         <div class="row">
             <div class="col-6">
                 <div class="form-group">
@@ -67,7 +67,7 @@
 
         </div>
     </form>
-    <div>{{myForm.value | json}}</div>
+    <!-- <div>{{myForm.value | json}}</div> -->
 
     <div>
         {{usermodel | json}}
@@ -76,7 +76,7 @@
     <!-- form validation -->
     <!-- if all fields satisfied then it is true -->
     <div>
-        {{myForm.form.valid}}
+        <!-- {{myForm.form.valid}} -->
     </div>
 </div>
 

@@ -6,7 +6,7 @@ import { UserModel } from './user-model';
   providedIn: 'root',
 })
 export class FormRegisterService {
-  _url = '';
+  _url = 'http://localhost:4201/register';
   constructor(private _http: HttpClient) {}
 
   enroll(user: UserModel) {
