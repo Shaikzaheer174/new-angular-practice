@@ -13,6 +13,7 @@ export class TemplateDrivenFormsEXComponent {
   course = ['HTML', 'JS', 'CSS', 'TYPESCRIPT', 'JAVA'];
   courseHasError = true;
   submitted = false;
+  errorMessage = '';
 
   submit() {
     alert('data submitted');
@@ -32,7 +33,7 @@ export class TemplateDrivenFormsEXComponent {
     this.submitted = true;
     this.registerService.enroll(this.usermodel).subscribe(
       data => console.log('Hurrah, data sent successfully....', data),
-      error => console.log('oops, somwthing went wrong...', error)
+      error => this.errorMessage = error.statusText
     );
   }
 }

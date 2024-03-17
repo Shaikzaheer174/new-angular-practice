@@ -1,5 +1,9 @@
 <div class="container">
     <p class="main-heading">Template-driven's SIGN UP</p>
+    <div class="alert alert-danger" *ngIf="errorMessage">
+        {{errorMessage}}
+    </div>
+    
     <form #myForm="ngForm" (ngSubmit)="onSubmit()" novalidate *ngIf="!submitted">
         <div class="row">
             <div class="col-6">

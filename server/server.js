@@ -23,7 +23,7 @@ server.listen(PORT, function () {
 // adding endpoint to which angular app will post the formData
 server.post("/register", function (req, res) {
     console.log(req.body);
-    res.status(200).send({
+    res.status(401).send({
         "message": "data received successfully"
     });
 })
