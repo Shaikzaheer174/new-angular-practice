@@ -35,6 +35,7 @@ import { CourseDurationComponent } from './course-duration/course-duration.compo
 import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
 import { adminAccessGuard } from './admin-access.guard';
 import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex/template-driven-forms-ex.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex
     CourseFeeComponent,
     CourseDurationComponent,
     AdminHomePageComponent,
-    TemplateDrivenFormsEXComponent
+    TemplateDrivenFormsEXComponent,
+    ReactiveFormsComponent
   ],
   imports: [
     BrowserModule,

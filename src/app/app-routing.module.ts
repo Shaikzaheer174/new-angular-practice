@@ -10,10 +10,12 @@ import { CourseFeeComponent } from './course-fee/course-fee.component';
 import { AdminHomePageComponent } from './admin-home-page/admin-home-page.component';
 import { adminAccessGuard } from './admin-access.guard';
 import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex/template-driven-forms-ex.component';
+import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'tdf', component: TemplateDrivenFormsEXComponent},
+  {path: 'rf', component: ReactiveFormsComponent},
   {path: 'employee', component: EmployeeListComponent},
   {path: 'course', component: CourseListComponent},
   {path: 'course/:id', 
