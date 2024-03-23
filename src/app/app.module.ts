@@ -21,7 +21,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentlistServiceExComponent } from './studentlist-service-ex/studentlist-service-ex.component';
 import { StudentDetailsServiceExComponent } from './student-details-service-ex/student-details-service-ex.component';
-import { StudentServiceService} from './student-service.service';
+import { StudentServiceService } from './student-service.service';
 import { StudentlistServiceExWithHttpComponent } from './studentlist-service-ex-with-http/studentlist-service-ex-with-http.component';
 import { StudentDetailsServiceExWithHttpComponent } from './student-details-service-ex-with-http/student-details-service-ex-with-http.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -36,6 +36,7 @@ import { AdminHomePageComponent } from './admin-home-page/admin-home-page.compon
 import { adminAccessGuard } from './admin-access.guard';
 import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex/template-driven-forms-ex.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -68,15 +69,16 @@ import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.co
     CourseDurationComponent,
     AdminHomePageComponent,
     TemplateDrivenFormsEXComponent,
-    ReactiveFormsComponent
+    ReactiveFormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [StudentServiceService, adminAccessGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
