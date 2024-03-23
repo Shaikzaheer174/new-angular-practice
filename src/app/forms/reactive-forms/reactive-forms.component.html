@@ -1,21 +1,46 @@
 <div class="my-background box">
   <h2 appChangeColor>Sign up</h2>
   <form [formGroup]="registrationForm">
-    <div class="form-group inputBox">
-      <label>Username: </label>
-      <input type="text" class="form-control" formControlName="userName" placeholder="Enter Username" required />
-    </div>
-    <div class="form-group inputBox">
-      <label>Password: </label>
-      <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" required />
-    </div>
-    <div class="form-group inputBox">
-      <label>Confirm password: </label>
-      <input type="password" formControlName="confirmPassword" placeholder="Enter Password" class="form-control" required />
-    </div>
-    <input type="submit" name="submit" value="Register" />
-  </form>
+    <div class="row">
 
+      <!-- first col -->
+      <div class="col-6">
+        <div class="form-group inputBox">
+          <label>Username: </label>
+          <input type="text" class="form-control" formControlName="userName" placeholder="Enter Username" required />
+        </div>
+        <div class="form-group inputBox">
+          <label>Password: </label>
+          <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" required />
+        </div>
+        <div class="form-group inputBox">
+          <label>Confirm password: </label>
+          <input type="password" formControlName="confirmPassword" placeholder="Enter Password" class="form-control" required />
+         </div>
+        <input type="submit" name="submit" value="Register" />
+      </div>
+
+      <!-- second col -->
+      <div class="col-6">
+        <div formGroupName="address">
+          <div class="form-group inputBox">
+          <label>City: </label>
+          <input type="text" class="form-control" formControlName="city" placeholder="Enter city" required />
+        </div>
+        <div class="form-group inputBox">
+          <label>State: </label>
+          <input type="text" class="form-control" formControlName="state" placeholder="Enter state" required />
+        </div>
+        <div class="form-group inputBox">
+          <label>Pincode: </label>
+          <input type="text" class="form-control" formControlName="pincode" placeholder="Enter pincode" required />
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </form>
+  
   <div style="color: white; padding: 30px;">
     {{registrationForm.value | json}}
   </div>
