@@ -62,7 +62,7 @@
     text-align: center;
  }
 
-.box input[type="submit"] {
+.box input[type="submit"] input[type="button"] {
     display: flex;
     text-align: center;
     justify-content: center;

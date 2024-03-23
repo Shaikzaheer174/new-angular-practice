@@ -19,4 +19,26 @@ export class ReactiveFormsComponent {
       pincode: new FormControl(''),
     }),
   });
+
+  displayValues() {
+    this.registrationForm.setValue({
+      userName: 'user1',
+      password: 'password1',
+      confirmPassword: 'password1',
+      address: {
+        city: 'city1',
+        state: 'state1',
+        pincode: 'pincode1',
+      },
+    });
+  }
+
+  displayFewValues() {
+    this.registrationForm.patchValue({
+      userName: 'user1',
+      address: {
+        city: 'city1',
+      },
+    });
+  }
 }
