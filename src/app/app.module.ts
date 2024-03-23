@@ -37,6 +37,7 @@ import { adminAccessGuard } from './admin-access.guard';
 import { TemplateDrivenFormsEXComponent } from './forms/template-driven-forms-ex/template-driven-forms-ex.component';
 import { ReactiveFormsComponent } from './forms/reactive-forms/reactive-forms.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ChangeColorDirective } from './change-color.directive';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AdminHomePageComponent,
     TemplateDrivenFormsEXComponent,
     ReactiveFormsComponent,
+    ChangeColorDirective,
   ],
   imports: [
     BrowserModule,

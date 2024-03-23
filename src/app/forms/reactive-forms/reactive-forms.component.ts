@@ -7,6 +7,9 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./reactive-forms.component.css'],
 })
 export class ReactiveFormsComponent {
+
+  constructor() {}
+
   registrationForm = new FormGroup({
     userName : new FormControl(''),
     password : new FormControl(''),
