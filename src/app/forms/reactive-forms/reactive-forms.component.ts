@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -7,16 +7,27 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./reactive-forms.component.css'],
 })
 export class ReactiveFormsComponent {
-  constructor() {}
+  constructor(private _FB: FormBuilder) {}
 
-  registrationForm = new FormGroup({
-    userName: new FormControl(''),
-    password: new FormControl(''),
-    confirmPassword: new FormControl(''),
-    address: new FormGroup({
-      city: new FormControl(''),
-      state: new FormControl(''),
-      pincode: new FormControl(''),
+  // registrationForm = new FormGroup({
+  //   userName: new FormControl(''),
+  //   password: new FormControl(''),
+  //   confirmPassword: new FormControl(''),
+  //   address: new FormGroup({
+  //     city: new FormControl(''),
+  //     state: new FormControl(''),
+  //     pincode: new FormControl(''),
+  //   }),
+  // });
+
+  registrationForm = this._FB.group({
+    userName: ['zaheer'],
+    password: [''],
+    confirmPassword: [''],
+    address: this._FB.group({
+      city: [''],
+      state: [''],
+      pincode: [''],
     }),
   });
 
