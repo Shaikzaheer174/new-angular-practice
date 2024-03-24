@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -21,7 +21,8 @@ export class ReactiveFormsComponent {
   // });
 
   registrationForm = this._FB.group({
-    userName: ['zaheer'],
+    // userName: ['', Validators.required],    //for single validation
+    userName: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(8)]],
     password: [''],
     confirmPassword: [''],
     address: this._FB.group({
@@ -30,6 +31,10 @@ export class ReactiveFormsComponent {
       pincode: [''],
     }),
   });
+
+  get username() {
+    return this.registrationForm.get('userName');
+  }
 
   displayValues() {
     this.registrationForm.setValue({
